@@ -1,0 +1,29 @@
+.dex-readme-section .table-responsive {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.pokedex-nav .pokedex-menu-toggle {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .dex-readme-section .dex-table {
+    min-width: 600px;
+  }
+
+
+  .pokedex-nav.menu-ready .pokedex-menu-toggle {
+    display: inline-block;
+  }
+
+  .pokedex-nav.menu-ready .pokedex-menu {
+    display: none;
+  }
+
+  .pokedex-nav.menu-ready .pokedex-menu.is-open {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
