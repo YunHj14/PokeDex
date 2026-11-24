@@ -221,19 +221,6 @@ main.container {
   padding-left: 12px;
   border-left: 4px solid var(--poke-red);
 }
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
 .card,
 .member-card,
 .info-box {
@@ -346,15 +333,6 @@ main.container {
   border-radius: 6px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
-
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-  margin-bottom: 24px;
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
-}
-
 .table-responsive:last-child {
   margin-bottom: 0;
 }
@@ -625,13 +603,6 @@ main.container {
   margin-bottom: 14px;
   font-weight: 600;
 }
-
-.pokedex-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  gap: 20px;
-}
-
 .poke-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -1418,16 +1389,4 @@ main.container {
   color: #94a3b8;
   margin-top: 4px;
 }
-
-@media (max-width: 600px) {
-  .hero-section h1,
-  .page-header h1,
-  .support-heading h1 {
-    font-size: 1.45rem;
-  }
-
-  .nav-list a {
-    padding: 5px 10px;
-    font-size: 0.88rem;
-  }
 }
