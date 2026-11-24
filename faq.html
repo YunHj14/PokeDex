@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>자주 묻는 질문 | PokeDex</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="pokeball-icon" aria-hidden="true"></span><span>PokeDex · A조</span></a>
+      <nav aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a href="index.html">메인 메뉴</a></li>
+          <li><a href="about.html">팀 소개</a></li>
+          <li><a href="members.html">팀원 도감</a></li>
+          <li><a href="projects.html">포켓몬 도감</a></li>
+          <li><a href="activities.html">활동 기록</a></li>
+          <li><a href="faq.html" class="active" aria-current="page">자주 묻는 질문</a></li>
+          <li><a href="contact.html">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<main class="support-main">
+<section class="support-heading"><p class="support-label">POKEDEX · FAQ</p><h1>자주 묻는 질문</h1><p>태그 버튼을 눌러 원하는 주제의 질문과 답변을 확인하세요.</p></section>
+<!-- 태그 버튼을 누르면 해당 주제의 질문만 표시합니다. -->
+<section class="faq-search-panel" aria-label="FAQ 태그 필터">
+  <div class="faq-tag-filters" aria-label="태그 선택">
+    <button type="button" data-faq-tag="" aria-pressed="true">전체 태그</button>
+    <button type="button" data-faq-tag="소개" aria-pressed="false">#소개</button>
+    <button type="button" data-faq-tag="기술" aria-pressed="false">#기술</button>
+    <button type="button" data-faq-tag="이용방법" aria-pressed="false">#이용방법</button>
+    <button type="button" data-faq-tag="오류" aria-pressed="false">#오류</button>
+    <button type="button" data-faq-tag="문의" aria-pressed="false">#문의</button>
+  </div>
+  <button type="button" id="faq-reset">태그 초기화</button>
+</section>
+<p id="faq-result-count" role="status" aria-live="polite" aria-atomic="true">전체 7개 중 7개 질문</p>
+<p id="faq-empty" hidden>조건에 맞는 질문이 없습니다. 다른 태그를 선택하거나 초기화해 주세요.</p>
+<noscript><p>태그 필터는 JavaScript를 켜야 사용할 수 있습니다. 아래에서 모든 질문과 답변을 확인할 수 있습니다.</p></noscript>
+<div class="faq-controls" aria-label="답변 표시 설정"><button type="button" data-faq-action="open">답변 모두 펼치기</button><button type="button" data-faq-action="close">답변 모두 접기</button></div>
+<!-- details와 summary는 JavaScript 없이도 개별 펼치기·접기가 가능합니다. -->
+<section id="faq-results" class="faq-list" aria-label="질문과 답변" tabindex="-1">
+<details class="faq-item" data-tags="소개"><summary>PokeDex는 어떤 사이트인가요?</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#소개</span></div><div class="faq-answer"><p>오픈소스 SW 활용 수업에서 A조 6명이 함께 만드는 팀 포트폴리오 도감입니다. 팀 소개, 팀원별 역할과 프로젝트 정보를 확인할 수 있습니다.</p></div></details>
+<details class="faq-item" data-tags="소개,이용방법"><summary>팀원 소개는 어디에서 볼 수 있나요?</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#소개</span> <span class="faq-item-tag">#이용방법</span></div><div class="faq-answer"><p>상단 메뉴의 <a href="members.html">팀원 도감</a>에서 윤하진, 허민재, 이예성, 김도영, 이재환, 이서준의 소개와 담당 역할을 확인할 수 있습니다.</p></div></details>
+<details class="faq-item" data-tags="기술"><summary>어떤 기술을 사용하나요?</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#기술</span></div><div class="faq-answer"><p>HTML, CSS, JavaScript로 구성하는 정적 웹사이트입니다. Git과 GitHub를 이용해 작업을 나누고 변경 내용을 관리합니다.</p></div></details>
+<details class="faq-item" data-tags="이용방법"><summary>FAQ의 답변은 어떻게 확인하나요?</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#이용방법</span></div><div class="faq-answer"><p>질문을 클릭하면 답변이 펼쳐지고, 다시 클릭하면 접힙니다. 키보드의 Tab으로 질문을 선택한 후 Enter 또는 Space를 눌러도 됩니다.</p></div></details>
+<details class="faq-item" data-tags="오류,이용방법"><summary>메뉴를 눌렀는데 페이지가 열리지 않아요.</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#오류</span> <span class="faq-item-tag">#이용방법</span></div><div class="faq-answer"><p>연결된 페이지가 아직 개발 중이거나 파일이 빠져 있을 수 있습니다. 다운로드한 HTML 파일과 css 폴더를 같은 프로젝트 폴더 구조로 유지해 주세요. 계속 문제가 생기면 문의 페이지로 알려 주세요.</p></div></details>
+<details class="faq-item" data-tags="문의"><summary>오류나 개선 의견은 어디로 보내나요?</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#문의</span></div><div class="faq-answer"><p><a href="contact.html">문의 페이지</a>의 GitHub 링크를 이용해 주세요. 이미 등록된 문의를 확인하거나 로그인 후 새로운 Issue를 작성할 수 있습니다.</p></div></details>
+<details class="faq-item" data-tags="문의"><summary>문의에 어떤 내용을 적으면 되나요?</summary><div class="faq-item-tags" aria-label="태그"><span class="faq-item-tag">#문의</span></div><div class="faq-answer"><p>문제가 발생한 페이지, 누른 버튼, 예상한 결과와 실제 결과를 적어 주세요. 기기와 브라우저 정보도 도움이 됩니다. 비밀번호나 개인 연락처는 적지 마세요.</p></div></details>
+</section>
+<p class="support-help">찾는 답변이 없나요? <a href="contact.html">문의 안내 확인하기 →</a></p>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 오픈소스 SW 활용 A조 · PokeDex</p>
+      <p class="footer-sub">팀원: 윤하진 · 허민재 · 이예성 · 김도영 · 이재환 · 이서준</p>
+      <p><a href="faq.html">자주 묻는 질문</a> · <a href="contact.html">문의 안내</a> ·
+        <a href="https://github.com/YunHj14/PokeDex" target="_blank" rel="noopener noreferrer">GitHub 저장소 (새 창)</a></p>
+    </div>
+  </footer>
+<script src="js/faq.js"></script>
+</body>
+</html>
