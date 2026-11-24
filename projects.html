@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokeDex - 1세대 전국도감 (No.001 ~ No.151)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 공통 헤더 및 내비게이션 -->
+ <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo"><span class="pokeball-icon" aria-hidden="true"></span><span>PokeDex · A조</span></a>
+      <nav aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a href="index.html">메인 메뉴</a></li>
+          <li><a href="about.html">팀 소개</a></li>
+          <li><a href="members.html">팀원 도감</a></li>
+          <li><a href="projects.html" class="active" aria-current="page">포켓몬 도감</a></li>
+          <li><a href="activities.html">활동 기록</a></li>
+          <li><a href="faq.html">자주 묻는 질문</a></li>
+          <li><a href="contact.html">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="container">
+    <section class="page-header">
+      <span class="badge">KANTO POKÉDEX · 1세대 전국도감 (No.001 ~ No.151)</span>
+      <h1>포켓몬스터 1세대 전국도감</h1>
+      <p>관동지방 151마리 포켓몬의 일러스트·기본정보·특성·세부정보·유전정보·진화·1세대 방어상성·종족치·도감설명을 확인해 보세요.</p>
+    </section>
+
+    <!-- 검색 및 1세대 15타입 필터 컨트롤 -->
+    <section class="pokedex-controls" aria-label="포켓몬 검색 및 필터">
+      <div class="search-box">
+        <label for="pokemon-search" class="sr-only">포켓몬 이름 또는 번호 검색</label>
+        <input
+          type="text"
+          id="pokemon-search"
+          placeholder="포켓몬 이름 또는 도감 번호 검색 (예: 피카츄, 025, 뮤츠, 151)..."
+          autocomplete="off"
+        >
+      </div>
+
+      <div class="filter-buttons" role="group" aria-label="1세대 포켓몬 타입 필터">
+        <button type="button" class="filter-btn active" data-type="all">전체 (151)</button>
+        <button type="button" class="filter-btn" data-type="풀">🌿 풀</button>
+        <button type="button" class="filter-btn" data-type="불꽃">🔥 불꽃</button>
+        <button type="button" class="filter-btn" data-type="물">💧 물</button>
+        <button type="button" class="filter-btn" data-type="전기">⚡ 전기</button>
+        <button type="button" class="filter-btn" data-type="노말">⭐ 노말</button>
+        <button type="button" class="filter-btn" data-type="독">☠️ 독</button>
+        <button type="button" class="filter-btn" data-type="비행">🕊️ 비행</button>
+        <button type="button" class="filter-btn" data-type="벌레">🐛 벌레</button>
+        <button type="button" class="filter-btn" data-type="땅">⛰️ 땅</button>
+        <button type="button" class="filter-btn" data-type="바위">🪨 바위</button>
+        <button type="button" class="filter-btn" data-type="격투">🥊 격투</button>
+        <button type="button" class="filter-btn" data-type="에스퍼">🔮 에스퍼</button>
+        <button type="button" class="filter-btn" data-type="얼음">❄️ 얼음</button>
+        <button type="button" class="filter-btn" data-type="고스트">👻 고스트</button>
+        <button type="button" class="filter-btn" data-type="드래곤">🐉 드래곤</button>
+      </div>
+    </section>
+
+    <!-- 검색 결과 개수 안내 -->
+    <p id="result-count" class="result-count" aria-live="polite">총 151마리의 포켓몬이 표시됩니다.</p>
+
+    <!-- 포켓몬 도감 카드 그리드 (JS로 렌더링) -->
+    <section class="section">
+      <div id="pokedex-grid" class="pokedex-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <p>조건에 일치하는 포켓몬을 찾지 못했습니다. 다른 이름이나 타입을 선택해 보세요!</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- 나무위키 스타일 포켓몬 상세 정보 모달 -->
+  <div id="pokemon-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-card namu-modal">
+      <button type="button" id="modal-close" class="modal-close" aria-label="상세 창 닫기">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 공통 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 오픈소스 SW 활용 A조 · PokeDex</p>
+      <p class="footer-sub">팀원: 윤하진 · 허민재 · 이예성 · 김도영 · 이재환 · 이서준</p>
+      <p><a href="faq.html">자주 묻는 질문</a> · <a href="contact.html">문의 안내</a> ·
+        <a href="https://github.com/YunHj14/PokeDex" target="_blank" rel="noopener noreferrer">GitHub 저장소 (새 창)</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
