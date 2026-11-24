@@ -625,30 +625,13 @@ main.container {
   margin-bottom: 14px;
   font-weight: 600;
 }
+
 .pokedex-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 20px;
 }
 
-/* 화면이 좁아질 때 반응형 줄바꿈 (필요 시 함께 추가) */
-@media (max-width: 960px) {
-  .pokedex-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 680px) {
-  .pokedex-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 420px) {
-  .pokedex-grid {
-    grid-template-columns: 1fr;
-  }
-}
 .poke-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -1448,7 +1431,6 @@ main.container {
     font-size: 0.88rem;
   }
 }
-
 /* ==========================================================================
    [8. 상세 페이지 (activities.html)] - 팀 아카이브 & 팀원 도감 테이블
    ========================================================================== */
@@ -1510,9 +1492,9 @@ main.container {
   line-height: 1.7;
 }
 
+/* 팀원 도감 테이블 그리드 (기존 members.html 스타일과 충돌 방지) */
 .member-table {
-  width: calc(100% + 40px);
-  table-layout: fixed;
+  width: 100%;
   border-collapse: separate;
   border-spacing: 20px;
   margin: -20px;
@@ -1528,9 +1510,7 @@ main.container {
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .member-table .member-card:hover {
@@ -1628,7 +1608,6 @@ main.container {
 
 .member-table .member-card h5 a:hover {
   background-color: var(--poke-red-dark);
-  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -1646,29 +1625,6 @@ main.container {
   }
 
   .member-table .member-card {
-    margin-bottom: 16px;
-  }
-
-  .member-table tr:last-child .member-card:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media (max-width: 600px) {
-  .summary-title {
-    font-size: 1.45rem;
-  }
-
-  .team-summary-card {
-    padding: 24px 18px;
-  }
-
-  .member-table .member-card {
-    padding: 18px;
-  }
-
-  .member-table .member-card h5 a {
-    width: 100%;
-    justify-content: center;
+    margin-bottom: 18px;
   }
 }
