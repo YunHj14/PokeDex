@@ -221,6 +221,19 @@ main.container {
   padding-left: 12px;
   border-left: 4px solid var(--poke-red);
 }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
 .card,
 .member-card,
 .info-box {
@@ -333,6 +346,15 @@ main.container {
   border-radius: 6px;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
 .table-responsive:last-child {
   margin-bottom: 0;
 }
@@ -1414,6 +1436,19 @@ main.container {
   margin-top: 4px;
 }
 
+@media (max-width: 600px) {
+  .hero-section h1,
+  .page-header h1,
+  .support-heading h1 {
+    font-size: 1.45rem;
+  }
+
+  .nav-list a {
+    padding: 5px 10px;
+    font-size: 0.88rem;
+  }
+}
+
 /* ==========================================================================
    [8. 상세 페이지 (activities.html)] - 팀 아카이브 & 팀원 도감 테이블
    ========================================================================== */
@@ -1475,9 +1510,9 @@ main.container {
   line-height: 1.7;
 }
 
-/* 팀원 도감 테이블 그리드 (기존 members.html 스타일과 충돌 방지) */
 .member-table {
-  width: 100%;
+  width: calc(100% + 40px);
+  table-layout: fixed;
   border-collapse: separate;
   border-spacing: 20px;
   margin: -20px;
@@ -1493,7 +1528,9 @@ main.container {
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .member-table .member-card:hover {
@@ -1591,6 +1628,7 @@ main.container {
 
 .member-table .member-card h5 a:hover {
   background-color: var(--poke-red-dark);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -1608,6 +1646,29 @@ main.container {
   }
 
   .member-table .member-card {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+  }
+
+  .member-table tr:last-child .member-card:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-title {
+    font-size: 1.45rem;
+  }
+
+  .team-summary-card {
+    padding: 24px 18px;
+  }
+
+  .member-table .member-card {
+    padding: 18px;
+  }
+
+  .member-table .member-card h5 a {
+    width: 100%;
+    justify-content: center;
   }
 }
