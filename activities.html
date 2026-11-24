@@ -3,71 +3,137 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>상세 페이지</title>
+  <title>활동 기록 | PokeDex</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <h1>상세 페이지</h1>
-  <hr />
+  <!-- 공통 헤더 및 내비게이션 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="pokeball-icon" aria-hidden="true"></span>
+        <span>PokeDex · A조</span>
+      </a>
+      <nav aria-label="주요 메뉴">
+        <ul class="nav-list">
+          <li><a href="index.html">메인 메뉴</a></li>
+          <li><a href="about.html">팀 소개</a></li>
+          <li><a href="members.html">팀원 도감</a></li>
+          <li><a href="projects.html">포켓몬 도감</a></li>
+          <li><a href="activities.html" class="active" aria-current="page">활동 기록</a></li>
+          <li><a href="faq.html">자주 묻는 질문</a></li>
+          <li><a href="contact.html">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <h3>팀명 : 포켓 덱스</h3>
-  <h3>팀 프로젝트 의의 : 처음 다른 사람들과 함께 프로그래밍을 하여 어색하고 낯선 부분이 많았지만<br> 
-    함께 협력하며 많은 난관들을 해결해 가는 과정에서 협력 코딩의 첫걸음을 내딛었다.</h3>
+  <!-- 메인 콘텐츠 -->
+  <main class="container">
+    <section class="team-summary-card">
+      <div class="summary-top-bar">
+        <div class="sensor-lights" aria-hidden="true">
+          <span class="sensor-main"></span>
+          <span class="sensor-dot dot-red"></span>
+          <span class="sensor-dot dot-yellow"></span>
+          <span class="sensor-dot dot-green"></span>
+        </div>
+        <span class="summary-badge">POKÉDEX TEAM ARCHIVE</span>
+      </div>
+      <h1 class="summary-title">활동 기록</h1>
+      <h3>팀명 : 포켓 덱스</h3>
+      <hr />
+      <h3 class="team-meaning">
+        팀 프로젝트 의의 : 처음 다른 사람들과 함께 프로그래밍을 하여 어색하고 낯선 부분이 많았지만<br />
+        함께 협력하며 많은 난관들을 해결해 가는 과정에서 협력 코딩의 첫걸음을 내딛었다.
+      </h3>
+    </section>
 
-  <br />
+    <table class="member-table">
+      <tr>
+        <td class="member-card leader-card">
+          <div class="card-top">
+            <h2>팀장</h2>
+            <span class="dex-no">TRAINER No.01</span>
+          </div>
+          <h4 class="member-info">윤하진 / hxz2in_y / yunhj1623@gmail.com</h4>
+          <h4 class="member-role">담당 내용 : GitHub저장소 관리, Issue 및 작업관리, Pull Request 및 코드리뷰, GitHub Pages 배포, README 작성</h4>
+          <h4 class="member-project">개인 프로젝트 : 포켓몬 사운드 도감 - 애니메이션 OST</h4>
+          <h5><a href="https://yunhj14.github.io/PokeSong/" target="_blank" rel="noopener noreferrer">포켓몬 사운드 도감 - 애니메이션 OST 바로가기</a></h5>
+        </td>
 
-  <table>
-    <tr>
-      <td>
-        <h2>팀장</h2>
-        <h4>윤하진 / hxz2in_y / yunhj1623@gmail.com</h4>
-        <h4>담당 내용 : GitHub저장소 관리, Issue 및 작업관리, Pull Request 및 코드리뷰, GitHub Pages 배포, README 작성</h4>
-        <h4>개인 프로젝트 : 포켓몬 사운드 도감 - 애니메이션 OST</h4>
-        <h5><a href="https://yunhj14.github.io/PokeSong/">포켓몬 사운드 도감 - 애니메이션 OST 바로가기</a></h5>
-      </td>
-      <td>
-        <h2>팀원</h2>
-        <h4>김도영 / doyoung.7 / bluefotion@naver.com</h4>
-        <h4>담당 내용 : 메인페이지 제작, 팀 소개 페이지 제작, 팀원 프로필 제작</h4>
-        <h4>개인 프로젝트 : PokeMatch | 1세대 151종 상성 & 종족값 판독기</h4>
-        <h5><a href="https://bluefotion.github.io/pokemon_matchup/">PokeMatch | 1세대 151종 상성 & 종족값 판독기 바로가기</a></h5>
-      </td>
-    </tr>
+        <td class="member-card">
+          <div class="card-top">
+            <h2>팀원</h2>
+            <span class="dex-no">TRAINER No.02</span>
+          </div>
+          <h4 class="member-info">김도영 / doyoung.7 / bluefotion@naver.com</h4>
+          <h4 class="member-role">담당 내용 : 메인페이지 제작, 팀 소개 페이지 제작, 팀원 프로필 제작</h4>
+          <h4 class="member-project">개인 프로젝트 : PokeMatch | 1세대 151종 상성 &amp; 종족값 판독기</h4>
+          <h5><a href="https://bluefotion.github.io/pokemon_matchup/" target="_blank" rel="noopener noreferrer">PokeMatch | 1세대 151종 상성 &amp; 종족값 판독기 바로가기</a></h5>
+        </td>
+      </tr>
 
-    <tr>
-      <td>
-        <h2>팀원</h2>
-        <h4>이서준 / j00nx_7 / lsj070601@gmail.com</h4>
-        <h4>담당 내용 : 반응형 웹 디자인, JavaScript 인터랙션 구현</h4>
-        <h4>개인 프로젝트 : 나만의 포켓몬 파티</h4>
-        <h5><a href="https://lsj070601.github.io/pokemon-party/">나만의 포켓몬 파티 바로가기</a></h5>
-      </td>
-      <td>
-        <h2>팀원</h2>
-        <h4>이예성 / e_eyes.07 / 1001yesung@gmail.com</h4>
-        <h4>담당 내용 : 프로젝트 갤러리 제작, 프로젝트 상세 페이지 제작, 발표자료 제작, 시연 및 발표 준비</h4>
-        <h4>개인 프로젝트 : 포켓 타자</h4>
-        <h5><a href="https://snow2eye.github.io/Poket-Typing/">포켓 타자 바로가기</a></h5>
-      </td>
-    </tr>
+      <tr>
+        <td class="member-card">
+          <div class="card-top">
+            <h2>팀원</h2>
+            <span class="dex-no">TRAINER No.03</span>
+          </div>
+          <h4 class="member-info">이서준 / j00nx_7 / lsj070601@gmail.com</h4>
+          <h4 class="member-role">담당 내용 : 반응형 웹 디자인, JavaScript 인터랙션 구현</h4>
+          <h4 class="member-project">개인 프로젝트 : 나만의 포켓몬 파티</h4>
+          <h5><a href="https://lsj070601.github.io/pokemon-party/" target="_blank" rel="noopener noreferrer">나만의 포켓몬 파티 바로가기</a></h5>
+        </td>
 
-    <tr>
-      <td>
-        <h2>팀원</h2>
-        <h4>이재환 / jh_029 / dh7778we@gmail.com</h4>
-        <h4>담당 내용 : 공통 메뉴 및 내비게이션 제작, 공통 헤더 및 푸터 제작, FAQ 페이지 제작, 연락처 및 문의 기능 제작</h4>
-        <h4>개인 프로젝트 : 타입 연구소-포켓몬 타입 퀴즈</h4>
-        <h5><a href="https://jaehwan029.github.io/pokemon-type-quiz/">타입 연구소-포켓몬 타입 퀴즈 바로가기</a></h5>
-      </td>
-      <td>
-        <h2>팀원</h2>
-        <h4>허민재 / ravi_.moi / ppsloth@naver.com</h4>
-        <h4>담당 내용 : 프로젝트 검색 및 필터 기능, 이미지 및 아이콘 관리, 웹 접근성 개선, 사용성 및 화면 테스트</h4>
-        <h4>개인 프로젝트 : 나와 닮은 포켓몬 찾기</h4>
-        <h5><a href="https://ppsloth.github.io/personality/">나와 닮은 포켓몬 찾기 바로가기</a></h5>
-      </td>
-    </tr>
-  </table>
+        <td class="member-card">
+          <div class="card-top">
+            <h2>팀원</h2>
+            <span class="dex-no">TRAINER No.04</span>
+          </div>
+          <h4 class="member-info">이예성 / e_eyes.07 / 1001yesung@gmail.com</h4>
+          <h4 class="member-role">담당 내용 : 프로젝트 갤러리 제작, 프로젝트 활동 기록 제작, 발표자료 제작, 시연 및 발표 준비</h4>
+          <h4 class="member-project">개인 프로젝트 : 포켓 타자</h4>
+          <h5><a href="https://snow2eye.github.io/Poket-Typing/" target="_blank" rel="noopener noreferrer">포켓 타자 바로가기</a></h5>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="member-card">
+          <div class="card-top">
+            <h2>팀원</h2>
+            <span class="dex-no">TRAINER No.05</span>
+          </div>
+          <h4 class="member-info">이재환 / jh_029 / dh7778we@gmail.com</h4>
+          <h4 class="member-role">담당 내용 : 공통 메뉴 및 내비게이션 제작, 공통 헤더 및 푸터 제작, FAQ 페이지 제작, 연락처 및 문의 기능 제작</h4>
+          <h4 class="member-project">개인 프로젝트 : 타입 연구소-포켓몬 타입 퀴즈</h4>
+          <h5><a href="https://jaehwan029.github.io/pokemon-type-quiz/" target="_blank" rel="noopener noreferrer">타입 연구소-포켓몬 타입 퀴즈 바로가기</a></h5>
+        </td>
+
+        <td class="member-card">
+          <div class="card-top">
+            <h2>팀원</h2>
+            <span class="dex-no">TRAINER No.06</span>
+          </div>
+          <h4 class="member-info">허민재 / ravi_.moi / ppsloth@naver.com</h4>
+          <h4 class="member-role">담당 내용 : 프로젝트 검색 및 필터 기능, 이미지 및 아이콘 관리, 웹 접근성 개선, 사용성 및 화면 테스트</h4>
+          <h4 class="member-project">개인 프로젝트 : 나와 닮은 포켓몬 찾기</h4>
+          <h5><a href="https://ppsloth.github.io/personality/" target="_blank" rel="noopener noreferrer">나와 닮은 포켓몬 찾기 바로가기</a></h5>
+        </td>
+      </tr>
+    </table>
+  </main>
+
+  <!-- 공통 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; 2026 오픈소스 SW 활용 A조 · PokeDex</p>
+      <p class="footer-sub">팀원: 윤하진 · 허민재 · 이예성 · 김도영 · 이재환 · 이서준</p>
+      <p><a href="faq.html">자주 묻는 질문</a> · <a href="contact.html">문의 안내</a> ·
+        <a href="https://github.com/YunHj14/PokeDex" target="_blank" rel="noopener noreferrer">GitHub 저장소 (새 창)</a></p>
+    </div>
+  </footer>
 
 </body>
 </html>
