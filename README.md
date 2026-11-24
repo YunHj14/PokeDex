@@ -22,13 +22,13 @@ team-portfolio/
 ├── index.html          # 메인 페이지 (메인 도감 진입로)
 ├── about.html          # 팀 소개 페이지 (오박사의 연구소 컨셉)
 ├── members.html        # 팀원 프로필 페이지 (6인의 포켓몬 도감)
-├── projects.html       # 프로젝트 갤러리 (배틀 아레나)
-├── activities.html     # 활동 기록 (모험의 발자취)
+├── projects.html       # 1세대 포켓몬 도감 페이지
+├── gallery.html       # 개인 프로젝트 갤러리 (팀원들이 각자 해낸 성과)
 ├── css/
 │   └── style.css       # 공통 디자인 (도감 UI 테마)
 ├── js/
 │   └── main.js         # 인터랙션 스크립트
-└── images/             # 이미지 자산
+└── README.md            # 프로젝트 목적, 팀원, 주요 기능, 실행 및 배포 방법 정리를 나타낸 파일
 ```
 
 <br>
@@ -39,9 +39,10 @@ team-portfolio/
 * **`feature/main-page`** : 메인 페이지 개발
 * **`feature/about`** : 팀 소개 페이지 개발
 * **`feature/members`** : 팀원 프로필 개발
-* **`feature/projects`** : 프로젝트 갤러리 개발
-* **`feature/activities`** : 활동 기록 개발
-* **`feature/common-style`** : 공통 디자인 및 UI 개발
+* **`feature/projects`** : 포켓몬 도감 구현
+* **`feature/gallery`** : 프로젝트 갤러리 개발
+* **`feature/css`** : 공통 디자인 및 UI 개발
+* **`feature/js`** : 인터랙션 스크립트 개발
 
 <br>
 
