@@ -1431,3 +1431,200 @@ main.container {
     font-size: 0.88rem;
   }
 }
+/* ==========================================================================
+   [8. 상세 페이지 (activities.html)] - 팀 아카이브 & 팀원 도감 테이블
+   ========================================================================== */
+.team-summary-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-top: 6px solid var(--poke-red);
+  border-radius: 14px;
+  padding: 36px 28px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.team-summary-card .sensor-lights {
+  display: none;
+}
+
+.summary-top-bar {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.summary-badge,
+.summary-top-bar .summary-badge {
+  display: inline-block;
+  background-color: #fee2e2;
+  color: var(--poke-red-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 0;
+}
+
+.summary-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--poke-dark);
+  margin-bottom: 10px;
+}
+
+.team-summary-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--poke-dark);
+}
+
+.team-summary-card hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 16px 0;
+}
+
+.team-summary-card .team-meaning {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+/* 팀원 도감 테이블 그리드 (기존 members.html 스타일과 충돌 방지) */
+.member-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+  margin: -20px;
+}
+
+.member-table .member-card {
+  display: table-cell;
+  width: 50%;
+  vertical-align: top;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-top: 5px solid var(--poke-red);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.member-table .member-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--poke-red);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.member-table .leader-card {
+  border-top-color: var(--poke-dark);
+}
+
+.member-table .card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.member-table .card-top h2 {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background-color: #fee2e2;
+  color: var(--poke-red-dark);
+}
+
+.member-table .leader-card .card-top h2 {
+  background-color: var(--poke-dark);
+  color: #ffffff;
+}
+
+.member-table .dex-no {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 0.02em;
+}
+
+.member-table .member-info {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--poke-dark);
+  margin-bottom: 10px;
+}
+
+.member-table .member-role {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--text-sub);
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+
+.member-table .member-project {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--poke-dark);
+  margin-bottom: 14px;
+}
+
+.member-table .member-card h5 {
+  margin-top: auto;
+}
+
+.member-table .member-card h5 a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: var(--poke-red);
+  padding: 9px 16px;
+  border-radius: 8px;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.member-table .member-card h5 a::after {
+  content: "→";
+  font-weight: 800;
+}
+
+.member-table .member-card h5 a:hover {
+  background-color: var(--poke-red-dark);
+}
+
+@media (max-width: 768px) {
+  .member-table,
+  .member-table tbody,
+  .member-table tr,
+  .member-table .member-card {
+    display: block;
+    width: 100%;
+  }
+
+  .member-table {
+    border-spacing: 0;
+    margin: 0;
+  }
+
+  .member-table .member-card {
+    margin-bottom: 18px;
+  }
+}
