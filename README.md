@@ -41,8 +41,12 @@ team-portfolio/
 * **`feature/members`** : 팀원 프로필 개발
 * **`feature/projects`** : 포켓몬 도감 구현
 * **`feature/gallery`** : 프로젝트 갤러리 개발
+* **`feature/faq`** : 인터랙션 스크립트 개발
 * **`feature/css`** : 공통 디자인 및 UI 개발
 * **`feature/js`** : 인터랙션 스크립트 개발
+* **`feature/review`** : 배포 전 코드 오류 확인
+* **`feature/site-update`** : README.md, 프로젝트 문서 수정
+
 
 <br>
 
@@ -65,6 +69,62 @@ team-portfolio/
 모든 팀원은 **최소 1개 이상의 PR**을 작성하며, 동료의 코드 리뷰와 승인(`Approve`)을 거쳐 `main`에 병합합니다.
 * **PR 필수 포함 항목:** 변경한 기능, 수정한 파일, 구현 결과(화면 캡처), 테스트 결과, 관련 Issue 번호
 * **리뷰어 역할:** 다른 팀원의 코드를 확인하고 개선 의견이나 피드백을 남긴 후 머지 프로세스 진행
+
+<br>
+
+
+## 🚀 프로젝트 실행 및 배포 방법
+
+### 1. 프로젝트 다운로드
+
+GitHub 저장소를 Clone하여 프로젝트를 로컬 환경에 다운로드합니다.
+
+```bash
+git clone https://github.com/yunhj14/PokeDex.git
+```
+
+프로젝트 폴더로 이동합니다.
+
+```bash
+cd PokeDex
+```
+
+### 2. 프로젝트 실행
+
+본 프로젝트는 HTML, CSS, JavaScript 기반의 정적 웹 프로젝트로 별도의 서버나 패키지 설치가 필요하지 않습니다.
+
+- 프로젝트 폴더의 `index.html` 파일을 브라우저에서 실행합니다.
+- 원활한 개발 및 테스트를 위해 VS Code의 **Live Server** 확장 프로그램 사용을 권장합니다.
+
+### 3. GitHub Pages 배포
+
+본 프로젝트는 GitHub Pages를 이용하여 웹사이트를 배포합니다.
+
+1. GitHub 프로젝트 저장소에 접속합니다.
+2. 저장소 상단의 **Settings** 메뉴를 선택합니다.
+3. 왼쪽 메뉴에서 **Pages**를 선택합니다.
+4. **Build and deployment** 항목을 다음과 같이 설정합니다.
+   - Source: `Deploy from a branch`
+   - Branch: `main`
+   - Folder: `/(root)`
+5. **Save** 버튼을 클릭합니다.
+6. 배포가 완료되면 아래 주소에서 웹사이트를 확인할 수 있습니다.
+
+```text
+https://yunhj14.github.io/PokeDex/
+```
+
+### 4. 배포 업데이트
+
+프로젝트 수정 사항을 GitHub의 `main` 브랜치에 반영하면 GitHub Pages가 변경 사항을 자동으로 배포합니다.
+
+- 작업 브랜치에서 기능 개발 및 수정
+- Pull Request를 통해 `main` 브랜치에 병합
+- GitHub Pages 자동 배포
+- 배포 주소에서 변경 사항 확인
+
+> ※ 최초 배포 및 업데이트 반영까지 일정 시간이 소요될 수 있습니다.
+
 
 <br>
 
